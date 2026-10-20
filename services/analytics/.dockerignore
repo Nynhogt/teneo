@@ -1,0 +1,5 @@
+analytics
+.git
+.gitignore
+Dockerfile
+.dockerignore

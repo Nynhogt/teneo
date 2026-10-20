@@ -1,0 +1,28 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Node.js / Next.js
+node_modules/
+.next/
+out/
+npm-debug.log*
+
+# Ruby / Rails
+services/api/.bundle/
+services/api/vendor/bundle/
+services/api/log/*
+services/api/tmp/*
+services/api/storage/*
+services/api/config/master.key
+services/api/.ruby-version
+
+# Go
+services/analytics/analytics
+
+# Editors and operating systems
+.zed/
+.vscode/
+.DS_Store
+Thumbs.db

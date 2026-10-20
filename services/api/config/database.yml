@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS", 5) %>
+  host: <%= ENV.fetch("POSTGRES_HOST", "localhost") %>
+  port: <%= ENV.fetch("POSTGRES_PORT", 5432) %>
+  database: <%= ENV.fetch("POSTGRES_DB", "teneo_development") %>
+  username: <%= ENV.fetch("POSTGRES_USER", "teneo") %>
+  password: <%= ENV.fetch("POSTGRES_PASSWORD", "change-me-for-local-development") %>
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+  database: <%= ENV.fetch("POSTGRES_TEST_DB", "teneo_test") %>
+
+production:
+  <<: *default
